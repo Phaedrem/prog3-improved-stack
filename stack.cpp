@@ -25,18 +25,18 @@ Stack::~Stack(){
     delete[] stack;
 }
 
-bool push(int, const char){
+bool Stack::push(int, const char){
     return true;
 }
 
-bool pop(){
+bool Stack::pop(){
     return true;
 }
 
-bool peek(){
+bool Stack::peek(){
     return true;
 }
 
-bool isEmpty(){
-    return true;
+bool Stack::isEmpty(){
+    return top == (-1);
 }
