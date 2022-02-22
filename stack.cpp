@@ -24,9 +24,9 @@ Stack::~Stack(){
     delete[] stack;
 }
 
-//bool Stack::push(int, string*){
-    //return true;
-//}
+bool Stack::push(int, string*){
+    return true;
+}
 
 bool Stack::pop(){
     return true;
