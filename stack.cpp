@@ -1,7 +1,8 @@
-/*
- * Your comment header here
- * modify this file as needed to complete the assignment
- */
+/*********************
+Name: Darren Bowers
+Coding 04
+Purpose: Stacks - First improvement assignment
+**********************/
 
 // each cpp includes ONLY it's header directly
 #include "stack.h"

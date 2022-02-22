@@ -1,7 +1,8 @@
-/*
- * Your comment header here
- * modify this file as needed to complete the assignment
- */
+/*********************
+Name: Darren Bowers
+Coding 04
+Purpose: Stacks - First improvement assignment
+**********************/
 
 #ifndef STACKS_FUNCTIONS_H
 #define STACKS_FUNCTIONS_H

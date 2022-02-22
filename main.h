@@ -1,7 +1,8 @@
-/*
- * your header here
- * 
- */
+/*********************
+Name: Darren Bowers
+Coding 04
+Purpose: Stacks - First improvement assignment
+**********************/
 
 #ifndef STACKS_MAIN_H
 #define STACKS_MAIN_H

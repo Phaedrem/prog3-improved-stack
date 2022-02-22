@@ -1,7 +1,8 @@
-/*
- * your header here
- * 
- */
+/*********************
+Name: Darren Bowers
+Coding 04
+Purpose: Stacks - First improvement assignment
+**********************/
 
 #include "main.h"
 
