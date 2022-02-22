@@ -15,7 +15,6 @@ Stack::Stack(int passed_size){
     } else{
         throw 0;
     }
-    
 }
 
 Stack::~Stack(){
@@ -25,9 +24,9 @@ Stack::~Stack(){
     delete[] stack;
 }
 
-bool Stack::push(int, const char){
-    return true;
-}
+//bool Stack::push(int, string*){
+    //return true;
+//}
 
 bool Stack::pop(){
     return true;
