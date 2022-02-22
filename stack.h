@@ -7,6 +7,7 @@ Purpose: Stacks - First improvement assignment
 #ifndef STACK_H
 #define STACK_H
 
+#define MINIMUM 2
 /*
  * there are no other includes here because they are not needed.
  * if you do need other things included, they would go here
