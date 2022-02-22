@@ -14,11 +14,11 @@ int main(int argc, char **argv) {
     if(argc == 2){
         int arraySize = atoi(argv[1]);
         if(arraySize >= 2){
-            // make 20 random strings, store them, display them
-            std::string strtemp;
-            for(int i=0; i<20; i++){
-                rand_string(&strtemp);
-                std::cout << strtemp << std::endl;
+            cout << "arraySize is  " << arraySize << endl;
+            try{
+                Stack testStack(arraySize);
+            } catch(...){
+                cout << "error" << endl;
             }
         } else{
             cout << "That is not a valid length, please enter a length of 2 or more" << endl;
@@ -28,22 +28,6 @@ int main(int argc, char **argv) {
         cout << "Error: One and only one arguement must be passed"  << endl;
     }
 
-
-
-
-
-
-    /* ***************************************************************
-     * First get your arguments from the command line. Your program must
-     * accept one and only one argument not including the program name
-     * itself. That argument must be an integer between 2 and any
-     * number (i.e. >= 2). If anything else is entered in any way,
-     * terminate the program with a suitable error message telling the
-     * user how to use your program correctly.
-     * 
-     * Remember, you may not use more than one return, even in main()
-     * and you may not use exit() or anything like that.
-     * ***************************************************************/
     
     /* ***************************************************************
      * Use the number passed in from the command line and declare a stack
