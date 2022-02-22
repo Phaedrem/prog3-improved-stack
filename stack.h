@@ -19,7 +19,7 @@ class Stack {
 public:
     Stack(int);
     ~Stack();
-    bool push(int, const char);
+    bool push(int, string*);
     bool pop();
     bool peek();
     bool isEmpty();
