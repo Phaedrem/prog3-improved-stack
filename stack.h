@@ -17,11 +17,12 @@ Purpose: Stacks - First improvement assignment
 class Stack {
 
 public:
-
-    /* 
-     * write all your public method prototypes here
-     * this includes you constructor and destructor
-     */
+    Stack(int);
+    ~Stack();
+    bool push(int, const char);
+    bool pop();
+    bool peek();
+    bool isEmpty();
     
 private:
 
