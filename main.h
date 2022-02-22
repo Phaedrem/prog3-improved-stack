@@ -15,6 +15,8 @@ Purpose: Stacks - First improvement assignment
 #include <string>     /* string */
 #include "functions.h"
 
+using std::cout;
+using std::endl;
 /*
  * additional directives here
  * 
