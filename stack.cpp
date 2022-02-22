@@ -8,10 +8,10 @@ Purpose: Stacks - First improvement assignment
 #include "stack.h"
 
 Stack::Stack(int passed_size){
-    if(passed_size >= 2){
+    if(passed_size >= MINIMUM){
         top = -1;
         size = passed_size;
-        stack = new Data*[size];
+        stack = new Data*[passed_size];
     } else{
         throw 0;
     }
