@@ -16,6 +16,8 @@ Purpose: Stacks - First improvement assignment
 #include "functions.h"
 #include "stack.h"
 
+#define MULTIPLIER 1.5
+
 using std::cout;
 using std::endl;
 /*
