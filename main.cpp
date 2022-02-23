@@ -12,8 +12,9 @@ int main(int argc, char **argv) {
     if(argc == 2 && arraySize >= 2){
         Data emptyData;
         string randomString;
-        string consistantString = "Test String";
         rand_string(&randomString); 
+        string consistantString = "Test String";
+
         cout << endl << "======================================================================" << endl;
         cout << "Beginning Testing" << endl;
         cout << "======================================================================" << endl << endl;
@@ -33,18 +34,18 @@ int main(int argc, char **argv) {
             cout << "Testing against empty stack" << endl;
             cout << "======================================================================" << endl << endl;
 
-
+            cout << endl << "Attempting to peek" << endl;
             if(testStack.peek(&emptyData)){
-                cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "PEEK FAILED - Stack is Empty" << endl;
+                cout << "peek underflow error: stack is empty" << endl;
             }
             cout << endl;
             cout << endl << "Attempting to pop" << endl;
             if(testStack.pop(&emptyData)){
-                cout << "Pop Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "POP FAILED - Stack is Empty" << endl;
+                cout << "pop underflow error: stack is empty" << endl;
             }
 
             cout << endl << "======================================================================" << endl;
@@ -59,7 +60,7 @@ int main(int argc, char **argv) {
                     cout << "Push FAILED - Stack is full or improper id/string was sent" << endl;
                 }
             }
-
+            cout << endl; 
             if(testStack.isEmpty()){
                 cout << "Stack is Empty" << endl;
             }else{
@@ -69,18 +70,18 @@ int main(int argc, char **argv) {
             cout << endl << "Testing Peek on full stack" << endl << endl;
 
             if(testStack.peek(&emptyData)){
-                cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "PEEK FAILED - Stack is Empty" << endl;
+                cout << "peek underflow error: stack is empty" << endl;
             }
             cout << endl << endl;
             testStack.dumpStack();
 
             cout << "Testing Pop on full stack" << endl << endl;
             if(testStack.pop(&emptyData)){
-                cout << "Pop Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "POP FAILED - Stack is Empty" << endl;
+                cout << "pop underflow error: stack is empty" << endl;
             }
             cout << endl;
             testStack.dumpStack();
@@ -91,80 +92,134 @@ int main(int argc, char **argv) {
 
             for(int i=0; i < arraySize*MULTIPLIER; i++){
                 if(testStack.peek(&emptyData)){
-                cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                    cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
                 }else{
-                    cout << "PEEK FAILED - Stack is Empty" << endl;
+                    cout << "peek underflow error: stack is empty" << endl;
                 }
                 if(testStack.pop(&emptyData)){
-                cout << "Pop Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                    cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
                 }else{
-                    cout << "POP FAILED - Stack is Empty" << endl;
+                    cout << "pop underflow error: stack is empty" << endl;
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*
-            cout << endl << "Attempting to push to stack" << endl << endl;
-            if(testStack.push(10, &randomString)){
-                cout << "PUSH Succesful" << endl;
+            cout << endl; 
+            if(testStack.isEmpty()){
+                cout << "Stack is Empty" << endl;
             }else{
-                cout << "PUSH FAILED" << endl << endl;
+                cout << "Stack is NOT Empty" << endl;
             }
+
             cout << endl;
             testStack.dumpStack();
+
             cout << endl << "Attempting to peek" << endl;
             if(testStack.peek(&emptyData)){
-                cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "PEEK FAILED" << endl;
+                cout << "peek underflow error: stack is empty" << endl;
             }
             cout << endl;
-            testStack.dumpStack();
             cout << endl << "Attempting to pop" << endl;
             if(testStack.pop(&emptyData)){
-                cout << "Pop Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
             }else{
-                cout << "POP FAILED" << endl;
+                cout << "pop underflow error: stack is empty" << endl;
+            }
+
+            cout << endl << "======================================================================" << endl;
+            cout << "Filling stack halfway and testing the middle of the stack" << endl;
+            cout << "======================================================================" << endl << endl;
+
+            for(int i = 0; i<(arraySize / 2); i++){
+                if(testStack.push(i+1, &consistantString)){
+                    cout << "Push Succesful" << endl;
+                }else{
+                    cout << "Push FAILED - Stack is full or improper id/string was sent" << endl;
+                }
             }
             cout << endl;
-            testStack.dumpStack();
-            cout << endl << "Attempting to peek" << endl;
-            if(testStack.peek(&emptyData)){
-                cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
-            }else{
-                cout << "PEEK FAILED" << endl;
+            for (int i = 0; i<arraySize*NARROW; i++) {
+                if (testStack.isEmpty()) {
+                    cout << "stack is empty" << endl;
+                } else {
+                    cout << "stack is NOT empty" << endl;
+                }
+                cout << endl;
+
+                cout << endl << "Attempting to peek" << endl;
+                if(testStack.peek(&emptyData)){
+                    cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
+                }else{
+                    cout << "peek underflow error: stack is empty" << endl;
+                }
+                cout << endl;
+                cout << endl << "Attempting to pop" << endl;
+                if(testStack.pop(&emptyData)){
+                    cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
+                }else{
+                    cout << "pop underflow error: stack is empty" << endl;
+                }
+                cout << endl << endl;
+                if(testStack.push(i+1, &consistantString)){
+                    cout << "Push Succesful" << endl;
+                }else{
+                    cout << "Push FAILED - Stack is full or improper id/string was sent" << endl;
+                }
+                cout << endl;
             }
-            */
+            cout << endl;
+
+            cout << endl << "======================================================================" << endl;
+            cout << "Random Test" << endl;
+            cout << "======================================================================" << endl << endl;
+
+            cout << "Emptying Stack" << endl << endl;
+            while(!testStack.isEmpty()){
+                testStack.pop(&emptyData);
+            }
+
+            if(testStack.isEmpty()) {
+                cout << "stack is empty" << endl;
+            }else {
+                cout << "stack is NOT empty" << endl;
+            }
+            
+            int choice = rand() % CHOICES + 1;
+            for(int i = 0; i < arraySize*RANDOM_MULTIPLIER; i++){
+                switch (choice){
+                    case 1:
+                    case 2:
+                        if(testStack.push(rand_int(), &randomString)){
+                            cout << "Push Succesful" << endl;
+                        }else{
+                            cout << "Push FAILED - Stack is full or improper id/string was sent" << endl;
+                        }
+                        break;
+                    case 3:
+                    case 4:
+                        if(testStack.pop(&emptyData)){
+                            cout << "Popped: " << emptyData.id << ": " << emptyData.information << endl;
+                        }else{
+                            cout << "pop underflow error: stack is empty" << endl;
+                        }
+                        break;
+                    case 5:
+                        if(testStack.peek(&emptyData)){
+                            cout << "Peeked: " << emptyData.id << ": " << emptyData.information << endl;
+                        }else{
+                            cout << "peek underflow error: stack is empty" << endl;
+                        }
+                        break;
+                    case 6:
+                        if(testStack.isEmpty()) {
+                            cout << "stack is empty" << endl;
+                        }else {
+                            cout << "stack is NOT empty" << endl;
+                        }
+                        break;
+                }
+                choice = rand() % CHOICES +1;
+            }
 
             cout << endl;
             testStack.dumpStack();
