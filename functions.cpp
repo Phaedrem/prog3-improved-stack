@@ -28,3 +28,7 @@ void rand_string(std::string *str){
     return;
 }
 
+int rand_int(){
+    int rnum = rand() % MAXINTSIZE + MINSINTSIZE;
+    return rnum;
+}
