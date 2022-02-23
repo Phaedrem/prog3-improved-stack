@@ -18,10 +18,8 @@ Stack::Stack(int passed_size){
 }
 
 Stack::~Stack(){
-    if(top > -1){
-        for(int i = 0; i< top+1; i++){
-          delete[] stack[i];
-        }
+    for(int i = top; i>=0; i--){
+        delete[] stack[i];
     }
     delete[] stack;
 }
