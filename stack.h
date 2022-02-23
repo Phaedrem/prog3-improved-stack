@@ -13,6 +13,7 @@ Purpose: Stacks - First improvement assignment
  * if you do need other things included, they would go here
  */
 
+#include <iostream>
 #include "data.h"
 
 class Stack {
@@ -24,6 +25,7 @@ public:
     bool pop();
     bool peek();
     bool isEmpty();
+    void dumpStack();
     
 private:
 
