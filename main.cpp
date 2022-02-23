@@ -7,21 +7,35 @@ Purpose: Stacks - First improvement assignment
 #include "main.h"
 
 int main(int argc, char **argv) {
-    // here for the rand_string() function
-    // if you don't use it, get rid of this
     srand(time(NULL));
-
     if(argc == 2){
+        string testData;
+        rand_string(&testData); 
         int arraySize = atoi(argv[1]);
         if(arraySize >= 2){
-            cout << "arraySize is  " << arraySize << endl;
+            cout << endl << "arraySize is " << arraySize << endl << "Attempting to create stack" << endl << endl;
             try{
                 Stack testStack(arraySize);
+                if(testStack.isEmpty()){
+                    cout << "There is now an empty stack" << endl;
+                }else{
+                    cout << "Something went wrong" << endl;
+                }
+                cout << endl << "Attempting to push to stack" << endl << endl;
+                if(testStack.push(10, &testData)){
+                    cout << "It worked" << endl;
+                }else{
+                    cout << "It FAILED" << endl << endl;
+                }
+                testStack.dumpStack();
+
+    
+
             } catch(...){
-                cout << "error" << endl;
+                cout << "That is not a valid length, please enter a postive numeral length of 2 or more" << endl;
             }
         } else{
-            cout << "That is not a valid length, please enter a length of 2 or more" << endl;
+            cout << "That is not a valid length, please enter a postive numeral length of 2 or more" << endl;
         }
 
     }else{
