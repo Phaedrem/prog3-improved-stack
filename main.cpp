@@ -189,6 +189,7 @@ int main(int argc, char **argv) {
                 switch (choice){
                     case 1:
                     case 2:
+                        rand_string(&randomString); 
                         if(testStack.push(rand_int(), &randomString)){
                             cout << "Push Succesful" << endl;
                         }else{
