@@ -50,8 +50,17 @@ bool Stack::pop(Data* dataBox){
     return popped;
 }
 
-bool Stack::peek(){
-    return true;
+bool Stack::peek(Data* dataBox){
+    bool peeked = false; 
+    if(top >= 0){
+       dataBox->id = stack[top]->id;
+       dataBox->information = stack[top]->information;
+       peeked = true;
+    }else{
+        dataBox->id = -1;
+        dataBox->information = "";
+    }
+    return peeked;
 }
 
 bool Stack::isEmpty(){
