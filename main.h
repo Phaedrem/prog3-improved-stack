@@ -17,6 +17,9 @@ Purpose: Stacks - First improvement assignment
 #include "stack.h"
 
 #define MULTIPLIER 1.5
+#define NARROW .30
+#define RANDOM_MULTIPLIER 10
+#define CHOICES 6
 
 using std::cout;
 using std::endl;
