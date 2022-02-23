@@ -8,8 +8,8 @@ Purpose: Stacks - First improvement assignment
 #define STACKS_FUNCTIONS_H
 
 #define MAXSTRSIZE 8
-#define MINSINTSIZE (-9)
-#define MAXINTSIZE 19
+#define MINSINTSIZE (-3)
+#define MAXINTSIZE 13
 
 #include <stdlib.h>   /* srand, rand */
 #include <time.h>     /* time */
