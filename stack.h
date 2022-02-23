@@ -23,7 +23,7 @@ public:
     ~Stack();
     bool push(int, string*);
     bool pop(Data*);
-    bool peek();
+    bool peek(Data*);
     bool isEmpty();
     void dumpStack();
     
