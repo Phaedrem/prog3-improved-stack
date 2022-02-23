@@ -30,11 +30,27 @@ int main(int argc, char **argv) {
                 }
                 cout << endl;
                 testStack.dumpStack();
+                cout << endl << "Attempting to peek" << endl;
+                if(testStack.peek(&emptyData)){
+                    cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                }else{
+                    cout << "PEEK FAILED" << endl;
+                }
+                cout << endl;
+                testStack.dumpStack();
                 cout << endl << "Attempting to pop" << endl;
                 if(testStack.pop(&emptyData)){
                     cout << "Pop Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
                 }else{
                     cout << "POP FAILED" << endl;
+                }
+                cout << endl;
+                testStack.dumpStack();
+                cout << endl << "Attempting to peek" << endl;
+                if(testStack.peek(&emptyData)){
+                    cout << "Peek Succesful" << endl << emptyData.id << ": " << emptyData.information << endl;
+                }else{
+                    cout << "PEEK FAILED" << endl;
                 }
                 cout << endl;
                 testStack.dumpStack();
