@@ -27,8 +27,7 @@ Stack::~Stack(){
 bool Stack::push(int identifier, string* info){
     bool pushed = false;
     if((top < size-1) && (identifier > 0) && (info->length() > 0)){
-        top++;
-        stack[top] = new Data;
+        stack[++top] = new Data;
         stack[top]->id = identifier;
         stack[top]->information = *info;
         pushed = true;
@@ -36,8 +35,19 @@ bool Stack::push(int identifier, string* info){
     return pushed;
 }
 
-bool Stack::pop(){
-    return true;
+bool Stack::pop(Data* dataBox){
+    bool popped = false; 
+    if(top >= 0){
+       dataBox->id = stack[top]->id;
+       dataBox->information = stack[top]->information;
+       top--;
+       popped = true;
+       delete stack[top+1];
+    }else{
+        dataBox->id = -1;
+        dataBox->information = "";
+    }
+    return popped;
 }
 
 bool Stack::peek(){
