@@ -229,10 +229,10 @@ int main(int argc, char **argv) {
                 cout << "That is not a valid length, please enter a postive numeral length of 2 or more" << endl;
             }
         }else{
-            cout << "Error: Pass One and only one arguement of a postive numberal of 2 or greater"  << endl;
+            cout << "Error: Pass a postive numeral of 2 or greater"  << endl;
         }
     }else{
-        cout << "Error: Pass One and only one arguement of a postive numberal of 2 or greater"  << endl;
+        cout << "Error: Pass one and only one arguement"  << endl;
     }
     
     return 0;
