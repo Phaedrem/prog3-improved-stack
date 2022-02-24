@@ -8,7 +8,7 @@ Purpose: Stacks - First improvement assignment
 #include "stack.h"
 
 Stack::Stack(int passed_size){
-    top = -1;
+    top = -1; 
     size = (passed_size >= 2) ? passed_size : MINIMUM;
     stack = new Data*[size];
 }
