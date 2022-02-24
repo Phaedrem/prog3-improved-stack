@@ -8,13 +8,9 @@ Purpose: Stacks - First improvement assignment
 #include "stack.h"
 
 Stack::Stack(int passed_size){
-    if(passed_size >= MINIMUM){
-        top = -1;
-        size = passed_size;
-        stack = new Data*[this->size];
-    } else{
-        throw 0;
-    }
+    top = -1;
+    size = (passed_size >= 2) ? passed_size : MINIMUM;
+    stack = new Data*[size];
 }
 
 Stack::~Stack(){
@@ -65,16 +61,4 @@ bool Stack::peek(Data* dataBox){
 
 bool Stack::isEmpty(){
     return top == (-1);
-}
-
-void Stack::dumpStack() {
-    std::cout << "dumping whole stack..." << std::endl;
-    if (!isEmpty()) {
-        for (int i = top; i >= 0; i--) {
-            std::cout << stack[i]->id << " " <<stack[i]->information << std::endl;
-        }
-    } else {
-        std::cout << "\tstack is empty" << std::endl;
-    }
-    std::cout << std::endl;
 }
